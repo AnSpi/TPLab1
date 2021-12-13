@@ -1,3 +1,4 @@
+[![Build Status](https://app.travis-ci.com/AnSpi/TPLab1.svg?branch=main)](https://app.travis-ci.com/AnSpi/TPLab1)
 # Лабораторная 1 по дисциплине "Технологии программирования"
 Знакомство с системой контроля версий Git и инструментом CI/CD Travis CI
 ## Цели работы
