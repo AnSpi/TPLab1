@@ -10,9 +10,9 @@
 4. Получить навыки работы с системой Git для хранения и управления версиями ПО;
 5. Получить навыки управления автоматизированным тестированием программного обеспечения,
 расположенного в системе Git, с помощью инструмента Travis CI.
-# Ход работы
-## Для выполнения индивидуального задания согласно 10 варианту создадим файл формата XML, класс XMLDataReader как наследник класса DataReader, тест этого класса и изменим файл main для работы с новым класом. Для этого откроем ветку XMLReader проекта.
-### Представленный в файле src/XMLDataReader.py класс реализует чтение данных из  файлов формата .xml
+## Ход работы
+Для выполнения индивидуального задания согласно 10 варианту создадим файл формата XML, класс XMLDataReader как наследник класса DataReader, тест этого класса и изменим файл main для работы с новым класом. Для этого откроем ветку XMLReader проекта.
+####Представленный в файле src/XMLDataReader.py класс реализует чтение данных из  файлов формата .xml
 ```python
 from Types import DataType
 from DataReader import DataReader
@@ -40,7 +40,7 @@ class XMLDataReader(DataReader):
                          int(score.strip() if score is not None else "")))
         return self.students
 ```
-### Тестирование класса XMLDataReader осуществляется с помощью класса, реализованного в файле test/test_XMLDataReader.py:
+#### Тестирование класса XMLDataReader осуществляется с помощью класса, реализованного в файле test/test_XMLDataReader.py:
 ```python
 import pytest
 from typing import Tuple
@@ -90,7 +90,7 @@ class TestTextDataReader:
         assert file_content == filepath_and_data[1]
 
 ```
-### main.py:
+#### main.py:
 ```python
 # from TextDataReader import TextDataReader
 from XMLDataReader import XMLDataReader
@@ -119,7 +119,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-###Добавим в проект класс StudentsInDebt, реализующий расчет и вывод на экран количество студентов, имеющих академические задолженности (имеющих балл < 61) ровно по двум предметам.
+####Добавим в проект класс StudentsInDebt, реализующий расчет и вывод на экран количество студентов, имеющих академические задолженности (имеющих балл < 61) ровно по двум предметам.
 ```python
 from Types import DataType
 
@@ -141,7 +141,7 @@ class StudentsInDebt:
         return self.count
 
 ```
-### Тестирование класса StudentsInDebt осуществляется с помощью класса, реализованного в файле test/test_StudentsInDebt.py:
+#### Тестирование класса StudentsInDebt осуществляется с помощью класса, реализованного в файле test/test_StudentsInDebt.py:
 ```python
 from typing import Tuple
 from Types import DataType
@@ -183,7 +183,7 @@ class TestStudentsInDebt():
         count = StudentsInDebt(input_data[0]).calc()
         assert count == input_data[1]
 ```
-### main.py:
+#### main.py:
 ```python
 # from TextDataReader import TextDataReader
 from XMLDataReader import XMLDataReader
@@ -216,21 +216,21 @@ if __name__ == "__main__":
     main()
 
 ```
-### Работа кода ветки XMLReader
-![program_result](/images/program_result.png)
-### Проверка кода прошла успешно
-![test](/images/test_result.png)
-### Структура файлов проекта
-![structure](/images/structure.png)
-### UML-диаграмма
-![UML-diagram](/images/UMLdiagram.png)
-### Пакеты:
+#### Работа кода ветки XMLReader
+![program_result](/images/program_result.PNG)
+#### Проверка кода прошла успешно
+![test](/images/test_result.PNG)
+#### Структура файлов проекта
+![structure](/images/structure.PNG)
+#### UML-диаграмма
+![UML-diagram](/images/UMLdiagram.PNG)
+#### Пакеты:
 - pytest - тестирование
 - mypy - корректность работы с типами
 - pycodestyle - соответствие кода стандарту РЕР-8
 - XMLDataReader - модуль для работы с xml
 
-# Выводы
+## Выводы
 1. Закреплено представление о распределенной системе контроля версий кода Git и ее функциях;
 2. Закреплены понятия «непрерывная интеграция» (CI) и «непрерывное развертывание»
 (CD), определено их место в современной разработке программного обеспечения;
