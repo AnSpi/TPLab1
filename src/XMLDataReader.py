@@ -14,10 +14,10 @@ class XMLDataReader(DataReader):
             tree = ET.parse(file)
             root = tree.getroot()
             for elem in root:
-                self.key = elem.tag.replace("_", " ")
+                self.key = elem.get('name')
                 self.students[self.key] = []
                 for subelem in elem:
-                    subj = subelem.tag
+                    subj = subelem.get('name')
                     score = subelem.text
                     self.students[self.key].append(
                         (subj.strip() if subj is not None else "",
