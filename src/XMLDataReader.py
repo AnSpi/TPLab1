@@ -14,6 +14,11 @@ class XMLDataReader(DataReader):
             tree = ET.parse(file)
             root = tree.getroot()
             for elem in root:
+<<<<<<< HEAD
+=======
+                name = elem.get('name')
+                print(name)
+>>>>>>> 0a4c2e9b1c9533209c7bd90e432635746ca6c38e
                 self.key = str(elem.get('name'))
                 self.students[self.key] = []
                 for subelem in elem:
