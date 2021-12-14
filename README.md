@@ -219,7 +219,7 @@ if __name__ == "__main__":
 #### Работа кода ветки XMLReader
 ![program_result](/images/program_result.PNG)
 #### Проверка кода прошла успешно
-![test](/images/test_result.PNG)
+![test](/images/tests_result.PNG)
 #### Структура файлов проекта
 ![structure](/images/structure.PNG)
 #### UML-диаграмма
