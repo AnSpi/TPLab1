@@ -1,7 +1,6 @@
 # from TextDataReader import TextDataReader
 from XMLDataReader import XMLDataReader
 from CalcRating import CalcRating
-from StudentsInDebt import StudentsInDebt
 import argparse
 import sys
 
@@ -21,8 +20,6 @@ def main():
     print("Students: ", students)
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
-    death_list = StudentsInDebt(students).calc()
-    print("Students with 2 debts:", death_list)
 
 
 if __name__ == "__main__":
